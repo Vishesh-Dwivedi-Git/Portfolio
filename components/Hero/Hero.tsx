@@ -4,7 +4,6 @@ import Image from 'next/image'
 import React from 'react'
 import { Mail } from 'lucide-react'
 import Button from '../ui/Button'
-
 import { motion } from "framer-motion"
 import AnimatedImageGrid from '../ui/AnimatedImageGrid'
 import Brandcontainer from '../Brandcontainer/Brandcontainer'
@@ -13,9 +12,9 @@ import ScheduleButton from '../ui/ScheduleButton'
 
 export default function Hero() {
     const handleClick = () => {
-        const email = process.env.NEXT_PUBLIC_TO_EMAIL;
+        const email = "visheshdwivedi225544@gmail.com";
         const subject = "Schedule a Call";
-        const body = "Hi, I'd like to schedule a call.";
+        const body = "Hi Vishesh, I'd like to schedule a call.";
         const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.open(mailtoLink, "_blank");
     };
@@ -25,8 +24,7 @@ export default function Hero() {
             {/* top  */}
             <section className="flex flex-col lg:flex-row items-center flex-none flex-nowrap gap-[20px] h-min justify-start overflow-visible p-0 relative w-full ">
                 <div className="flex items-start w-full md:items-center flex-none flex-nowrap flex-col gap-[10px] h-min justify-center p-0 relative md:w-min overflow-hidden">
-                    <div
-                        className="aspect-auto flex-none h-auto w-[260px] relative bg-image-bg rounded-lg">
+                    <div className="aspect-auto flex-none h-auto w-[260px] relative bg-image-bg rounded-lg">
                         <figure className='h-full w-full'>
                             <Image src={AvatarMe} alt='Avatar' width={300} height={300} className='w-full h-full object-cover' />
                             <AnimatedImageGrid image={AvatarMe} />
@@ -58,7 +56,7 @@ export default function Hero() {
                             transition={{ duration: 0.5, type: "spring", stiffness: 100, delay: 0.2 }}
                             viewport={{ once: true }}
                             className="text-4xl leading-[1.2em] font-bold text-white">
-                            Pragadesh V
+                            Vishesh Dwivedi
                         </motion.h1>
                     </div>
 
@@ -71,7 +69,7 @@ export default function Hero() {
                         transition={{ duration: 0.5, type: "spring", stiffness: 100, delay: 0.3 }}
                         viewport={{ once: true }}
                         className="text-[18px] text-light-gray-2 font-medium leading-[150%] mb-4">
-                        Experienced web developer from Kerala, India, with a passion for crafting seamless digital experiences and a proven track record.
+                        Full Stack Developer & Blockchain Specialist from IIIT Dharwad with experience in building AI-powered applications and decentralized systems.
                     </motion.p>
 
                     <motion.div
@@ -82,10 +80,8 @@ export default function Hero() {
                         }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 100, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="flex  items-start flex-none flex-nowrap  w-full gap-5 h-min justify-start p-0 relative">
+                        className="flex items-start flex-none flex-nowrap w-full gap-5 h-min justify-start p-0 relative">
                         <Button onClick={handleClick} position='left' icon={<Mail size={18} />} title='Email Me' />
-                        {/* <Button position='left' icon={<Calendar1 size={18} />} 
-                        title='Schedule Call' /> */}
                         <ScheduleButton icon={calendarIcon} label='Schedule call' />
                     </motion.div>
                 </div>
@@ -103,7 +99,6 @@ export default function Hero() {
                 <Brandcontainer />
                 {/* bottom  */}
                 <CounterContainer />
-
             </motion.div>
         </div>
     )

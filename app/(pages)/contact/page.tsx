@@ -33,7 +33,7 @@ export default function ContactPage() {
           description="Get Answers to Common Queries. Your Questions, Addressed Simply."
         />
 
-        <FAQ data={faqData} />
+        <FAQ />
 
       </div>
     </div>

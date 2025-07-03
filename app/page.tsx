@@ -15,7 +15,6 @@ export default function Home() {
         <MyStack />
         <MyServices />
         <ShowCase showData={2} isMore />
-        <Testimonials />
       </div>
     </div>
   )

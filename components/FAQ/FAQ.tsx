@@ -2,15 +2,37 @@
 import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
-import { motion, AnimatePresence, } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { multiplyIcon } from "@/app/assets/assets"
-import type { FAQ as FAQType } from "@/types"
 
-type FAQProps = {
-    data: FAQType[]
-}
+const faqData = [
+  {
+    question: "What blockchain technologies are you experienced with?",
+    answer: "I've developed on Ethereum, Polygon, and Solana blockchains. My carbon credit trading platform reduced verification time by 80% and handles 500+ transactions with 0.001 MATIC avg. gas fees. I've also mentored students in blockchain development through GDSC."
+  },
+  {
+    question: "Can you share your hackathon achievements?",
+    answer: "I won the Solana Redacted Hackathon (International) among 10,000+ participants, securing $600 USDC prize. Also won HackCrack National Level Hackathon among 1000+ participants, ranking in top 0.5%. Selected for AccelerateAI Hackathon 2025 as Top 9 among 100K applicants."
+  },
+  {
+    question: "What's your experience with AI projects?",
+    answer: "Built Animated - an AI-powered 2D animation generator processing 200+ prompts daily with 90% user satisfaction. Implemented segmented rendering with Manim reducing generation time by 75% (8min to 2min per animation). Deployed scalable architecture supporting 50+ concurrent users."
+  },
+  {
+    question: "What full-stack projects have you worked on?",
+    answer: "Developed DocDash - a document management system serving 150+ users with 99.5% retrieval accuracy. Implemented vector-based search using OpenAI embeddings, reducing query time from 5s to 1.2s. Built 15+ React components at GATICIAN, IIT Delhi serving 500+ daily users."
+  },
+  {
+    question: "How strong are your competitive programming skills?",
+    answer: "Ranked 1200 among 24K participants in a competitive programming contest. Solved 400+ DSA problems across LeetCode, CodeChef, GeeksForGeeks. Achieved top 3%ile in JEE 2023, demonstrating strong problem-solving abilities."
+  },
+  {
+    question: "What's your educational background?",
+    answer: "Pursuing B.Tech in Computer Science with Minor in Gen-AI from IIIT Dharwad (CGPA: 8.7/10.0). Previously scored 95% in CBSE Class XII at JB Academy. My education combines strong fundamentals with cutting-edge AI specialization."
+  }
+];
 
-const FAQ: React.FC<FAQProps> = ({ data }) => {
+const FAQ = () => {
     const [openIndices, setOpenIndices] = useState<number[]>([])
 
     const handleToggle = (index: number) => {
@@ -22,16 +44,14 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
     return (
         <div className="w-full">
             <div className="grid grid-cols-1 transition-all duration-500 lg:grid-cols-2 gap-[20px] w-full">
-                {data.map((faq, index) => (
+                {faqData.map((faq, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{
-                            once: true,
-                        }}
-                        className={`flex w-full select-none `}
+                        viewport={{ once: true }}
+                        className={`flex w-full select-none`}
                     >
                         <div className="w-full">
                             <motion.div
@@ -44,7 +64,7 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
                                             animate={{
                                                 color: openIndices.includes(index) ? "rgb(230, 230, 230)" : "rgb(153, 153, 153)",
                                             }}
-                                            className="text-[17px]  font-medium"
+                                            className="text-[17px] font-medium"
                                         >
                                             {faq.question}
                                         </motion.p>
@@ -54,9 +74,9 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
                                         animate={{ rotate: openIndices.includes(index) ? 45 : 0 }}
                                     >
                                         <Image
-                                            src={multiplyIcon || "/placeholder.svg"}
+                                            src={multiplyIcon}
                                             alt="toggle icon"
-                                            className="transition-opacity rotate-45 duration-500"
+                                            className="transition-opacity duration-500"
                                             style={{
                                                 opacity: openIndices.includes(index) ? 1 : 0.6,
                                             }}

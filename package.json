@@ -12,7 +12,7 @@
     "@calcom/embed-react": "^1.5.2",
     "@vercel/analytics": "^1.4.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.0.0",
+    "framer-motion": "^12.23.0",
     "lucide-react": "^0.473.0",
     "mongoose": "^8.9.5",
     "next": "15.1.4",
@@ -26,7 +26,8 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
+    "@types/estree": "^1.0.8",
+    "@types/node": "^20.19.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
