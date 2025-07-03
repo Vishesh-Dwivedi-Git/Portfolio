@@ -12,9 +12,10 @@ export default function Home() {
       <div className='gap-[100px] flex-col max-w-full w-full lg:max-w-[750px] lg:w-[80%] lg:flex-nowrap flex items-center flex-none h-min justify-center  relative overflow-hidden lg:overflow-visible p-[80px_0px]  ' >
         <Hero />
         <MyExperience />
+        <ShowCase/>
         <MyStack />
         <MyServices />
-        <ShowCase showData={2} isMore />
+        
       </div>
     </div>
   )

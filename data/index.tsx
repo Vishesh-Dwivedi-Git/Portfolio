@@ -1,4 +1,4 @@
-import { Mail, User, Zap } from "lucide-react";
+import { Linkedin, Mail, User, Zap } from "lucide-react";
 import {
   athonLogo,
   client_1,
@@ -46,8 +46,8 @@ export const pagesLists: pagesListsType[] = [
   },
   {
     id: 2,
-    title: "Services",
-    href: "/services",
+    title: "Projects",
+    href: "/projects",
     icon: <Zap />,
   },
   {
@@ -61,15 +61,15 @@ export const pagesLists: pagesListsType[] = [
 export const socialLists: socialListsTypes[] = [
   {
     id: 1,
-    title: 'Instagram',
-    icon: <Instagram size={22} />,
-    link: 'https://www.instagram.com/'
+    title: 'LinkedIn',
+    icon: <Linkedin size={22} />,
+    link: 'https://www.linkedin.com/in/vishesh-dwivedi-567426275/'
   },
   {
     id: 2,
     title: 'Github',
     icon: <Github size={22} />,
-    link: 'https://www.github.com/psparwez'
+    link: 'https://github.com/Vishesh-Dwivedi-Git'
   },
   {
     id: 3,
@@ -79,7 +79,7 @@ export const socialLists: socialListsTypes[] = [
         <path d="M10.4883 14.651L15.25 21H22.25L14.3917 10.5223L20.9308 3H18.2808L13.1643 8.88578L8.75 3H1.75L9.26086 13.0145L2.31915 21H4.96917L10.4883 14.651ZM16.25 19L5.75 5H7.75L18.25 19H16.25Z"></path>
       </svg>
     ),
-    link: 'https://www.twitter.com/psparwez'
+    link: 'https://x.com/Vishesh2Dwivedi'
   }
 ]
 
@@ -403,26 +403,20 @@ export const faqData: FAQ[] = [
 export const followerData: FollowerData[] = [
   {
     platform: "twitter",
-    followers: "12.6K",
-    url: "https://twitter.com/",
+    followers: "110+",
+    url: "https://x.com/Vishesh2Dwivedi",
     icon: XLogo,
   },
   {
     platform: "Instagram",
-    followers: "8.3K",
-    url: "https://www.instagram.com/",
+    followers: "520+",
+    url: "https://www.instagram.com/visheshdwivedi54/",
     icon: instagramIcon,
   },
   {
     platform: "LinkedIn",
-    followers: "2.5K",
-    url: "https://www.linkedin.com/",
+    followers: "1.5k+",
+    url: "https://www.linkedin.com/in/vishesh-dwivedi-567426275/",
     icon: linkedInIcon,
-  },
-  {
-    platform: "Dribbble",
-    followers: "3.2K",
-    url: "https://dribbble.com/",
-    icon: dribbleIcon,
   },
 ];

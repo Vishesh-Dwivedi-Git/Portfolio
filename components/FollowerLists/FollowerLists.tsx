@@ -23,7 +23,7 @@ export default function FollowerLists({ followerData, rightArrow }: ContactFormP
         >
             <ul className="flex flex-col gap-4">
                 {followerData.map((data, index) => (
-                    <motion.li key={index} variants={itemVariants}>
+                    <motion.li key={index} >
                         <Link
                             href={data.url}
                             className="flex items-center gap-4 p-4 bg-very-dark-gray border border-dark-gray-3 rounded-xl hover:bg-almost-black transition-all group"
