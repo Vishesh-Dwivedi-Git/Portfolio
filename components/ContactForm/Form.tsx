@@ -13,9 +13,9 @@ export default function Form() {
   })
 
   const [data, setData] = useState({
-    name: "Enter your name",
-    email: "Yourmail@mail.com",
-    message: "Hi , i want to have a meet!"
+    name: "",
+    email: "",
+    message: "",
   })
 
   const validateForm = () => {
@@ -97,7 +97,7 @@ export default function Form() {
               <CheckCircle2 size={48} className="text-green-500" />
               <h3 className="text-xl font-bold text-white">Message Sent!</h3>
               <p className="text-light-gray-2 text-center">
-                Thank you for contacting me. I'll get back to you soon.
+                Thank you for contacting me. I&apos;ll get back to you soon.
               </p>
             </>
           ) : (
