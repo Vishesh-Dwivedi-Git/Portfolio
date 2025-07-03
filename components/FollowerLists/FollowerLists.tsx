@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { itemVariants, listVariants } from "@/animation/varients";
+import {  listVariants } from "@/animation/varients";
 import { motion } from "framer-motion";
 import { FollowerData } from '@/types';
 

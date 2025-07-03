@@ -6,7 +6,6 @@ import { Mail, Download } from 'lucide-react'
 import Button from '../ui/Button'
 import { motion } from "framer-motion"
 import AnimatedImageGrid from '../ui/AnimatedImageGrid'
-import Brandcontainer from '../Brandcontainer/Brandcontainer'
 import CounterContainer from '../CounterContainer/CounterContainer'
 
 export default function Hero() {
