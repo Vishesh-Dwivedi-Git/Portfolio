@@ -217,12 +217,12 @@ export default function ServicesPage() {
                         <div key={`${project.id}-${category}`} className="space-y-1">
                           <p className="text-xs text-light-gray-4 capitalize">{category}</p>
                           <div className="flex flex-wrap gap-1.5">
-                            {technologies.map((tech:any) => (
+                            {technologies.map((tech:unknown) => (
                               <span 
                                 key={`${project.id}-${tech}`}
                                 className="px-2.5 py-1 text-xs rounded-full bg-dark-gray-4 text-light-gray-2"
                               >
-                                {tech}
+                                {tech as string}
                               </span>
                             ))}
                           </div>

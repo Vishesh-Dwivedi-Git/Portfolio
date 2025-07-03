@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
 import { FormEvent, useState } from "react"
-import { formVariants } from "@/animation/varients"
 import { CheckCircle2, XCircle } from "lucide-react"
 
 export default function Form() {
@@ -14,9 +13,9 @@ export default function Form() {
   })
 
   const [data, setData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: "Enter your name",
+    email: "Yourmail@mail.com",
+    message: "Hi , i want to have a meet!"
   })
 
   const validateForm = () => {

@@ -3,7 +3,6 @@ import MyExperience from '@/components/MyExperience/MyExperience'
 import MyServices from '@/components/MyServices/MyServices'
 import MyStack from '@/components/MyStack/MyStack'
 import ShowCase from '@/components/ShowCase'
-import Testimonials from '@/components/Testimonials'
 import React from 'react'
 
 export default function Home() {

@@ -69,7 +69,15 @@ export default function MyServices() {
     )
 }
 
-function ServiceCard({ service, index }: { service: any, index: number }) {
+type Service = {
+    id: number;
+    icon: any;
+    title: string;
+    description: string;
+    link: string;
+};
+
+function ServiceCard({ service, index }: { service: Service, index: number }) {
     return (
         <motion.li
             initial={{ opacity: 0, y: 20 }}

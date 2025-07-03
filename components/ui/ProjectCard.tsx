@@ -4,7 +4,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {  linkIcon } from '@/app/assets/assets'
 
-export default function ProjectCard({ item, index }: { item: any, index: number }) {
+type ProjectItem = {
+    image: string;
+    title: string;
+    type: string;
+    tech: string;
+    description: string;
+    github: string;
+    demo: string;
+};
+
+export default function ProjectCard({ item, index }: { item: ProjectItem, index: number }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}

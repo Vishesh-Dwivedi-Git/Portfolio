@@ -98,7 +98,15 @@ export default function MyStack() {
     )
 }
 
-function TechStackCard({ stack, index }: { stack: any, index: number }) {
+type StackItem = {
+    id: number;
+    logo: any;
+    title: string;
+    description: string;
+    link: string;
+};
+
+function TechStackCard({ stack, index }: { stack: StackItem, index: number }) {
     return (
         <motion.li
             key={stack.id}
