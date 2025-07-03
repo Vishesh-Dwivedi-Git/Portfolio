@@ -12,6 +12,8 @@ import web3 from '../../app/assets/WEB3.0-removebg-preview.png'
 import mongo from '../../app/assets/mongo-removebg-preview.png';
 import docker from "../../app/assets/dock-removebg-preview.png"
 import python from "../../app/assets/pyhton-removebg-preview.png"
+import type { StaticImageData } from 'next/image';
+
 
 
 const myStack = [
@@ -100,7 +102,7 @@ export default function MyStack() {
 
 type StackItem = {
     id: number;
-    logo: any;
+    logo: StaticImageData;
     title: string;
     description: string;
     link: string;

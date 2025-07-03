@@ -9,6 +9,8 @@ import fullstack from "../../app/assets/fullstack-removebg-preview.png";
 import Ai from "../../app/assets/Ai-removebg-preview.png";
 import blockchain from "../../app/assets/block-removebg-preview.png";
 import Tech from "../../app/assets/tech-removebg-preview.png"
+import type { StaticImageData } from 'next/image';
+
 
 const myServices = [
   {
@@ -71,7 +73,7 @@ export default function MyServices() {
 
 type Service = {
     id: number;
-    icon: any;
+    icon: StaticImageData;
     title: string;
     description: string;
     link: string;
