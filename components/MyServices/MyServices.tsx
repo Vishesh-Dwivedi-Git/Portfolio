@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 const myServices = [
   {
     id: 1,
-    icon: '/web-development-icon.png', // Add appropriate icon
+    icon: '/web-development-icon.png',
     title: "Full Stack Development",
     description: "Building responsive web applications with React, Next.js, and Node.js. Experience serving 500+ daily users with optimized performance.",
     link: "#projects"
@@ -39,67 +39,82 @@ const myServices = [
 
 export default function MyServices() {
     return (
-        <div className='flex items-start flex-none flex-col flex-nowrap gap-[30px] h-min justify-start overflow-visible relative w-full'>
-            <div className="flex-none h-auto relative w-full">
+        <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12">
+            <div className="flex flex-col gap-8 w-full">
                 <SectionHeading 
                     icon={zapIcon} 
                     title='My Expertise' 
                     description='Leveraging cutting-edge technologies to build innovative solutions that deliver real impact.' 
                 />
-            </div>
-            <div className="w-full">
+                
                 <motion.ul
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    className="grid gap-[10px] flex-none auto-rows-min h-min justify-center overflow-visible relative p-0 w-full grid-cols-1 lg:grid-cols-[repeat(2,minmax(50px,1fr))] lg:grid-rows-[repeat(2,min-content)]">
-                    {myServices?.map((service, index) => (
-                        <motion.li
-                            key={service.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="w-full">
-                            <Link href={service.link} className='bg-very-dark-gray border border-dark-gray-3 rounded-xl w-full cursor-pointer items-start flex flex-col flex-nowrap gap-[14px] h-min justify-start overflow-visible p-5 relative group hover:border-light-gray-3 transition-all duration-300'>
-                                {/* top  */}
-                                <div className="flex items-center flex-none flex-nowrap gap-[10px] h-min justify-start overflow-visible p-0 relative w-full">
-                                    <div className="flex flex-none items-center flex-nowrap gap-[10px] h-min justify-center overflow-hidden p-2 relative w-min border border-border-color bg-dark-gray-3 rounded-lg group-hover:bg-dark-gray-4 transition-all duration-300">
-                                        <div className="aspect-square flex-none h-auto overflow-hidden relative w-[30px]">
-                                            <figure className='absolute inset-0 rounded-[inherit] w-full h-full'>
-                                                <Image 
-                                                  width={30} 
-                                                  height={30} 
-                                                  src={service.icon} 
-                                                  alt="icon" 
-                                                  className='block w-full h-full rounded-[inherit] object-cover object-center' />
-                                            </figure>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex-1 flex flex-col justify-start flex-shrink-0 h-auto relative whitespace-pre-wrap break-words">
-                                        <p className='font-bold text-[20px] text-white leading-[1.2em] group-hover:text-light-gray-3 transition-all duration-300'>{service.title}</p>
-                                    </div>
-
-                                    <div className="aspect-square h-auto flex-none overflow-hidden relative w-[30px] transition-all duration-500 opacity-0 group-hover:opacity-100">
-                                        <figure className='absolute top-0 left-0 right-0 bottom-0 rounded-[inherit]'>
-                                            <Image 
-                                              width={20} 
-                                              height={20} 
-                                              src={rightArrow} 
-                                              alt="icon" 
-                                              className='block w-full h-full rounded-[inherit] object-cover object-center group-hover:-rotate-45 transition-all duration-500' />
-                                        </figure>
-                                    </div>
-                                </div>
-                                {/* bottom */}
-                                <div className="flex flex-none flex-shrink-0 flex-col justify-start h-auto relative whitespace-pre-wrap w-full break-words">
-                                    <p className='text-light-gray-2 text-[15px] font-medium group-hover:text-light-gray-3 transition-all duration-300'>{service.description}</p>
-                                </div>
-                            </Link>
-                        </motion.li>
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.1 } }
+                    }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"
+                >
+                    {myServices.map((service, index) => (
+                        <ServiceCard key={service.id} service={service} index={index} />
                     ))}
                 </motion.ul>
             </div>
-        </div>
+        </section>
+    )
+}
+
+function ServiceCard({ service, index }: { service: any, index: number }) {
+    return (
+        <motion.li
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="w-full h-full"
+        >
+            <Link 
+                href={service.link} 
+                className="group h-full flex flex-col border border-dark-gray-3 bg-very-dark-gray rounded-xl p-5 hover:border-light-gray-3 transition-all duration-300 hover:shadow-lg"
+            >
+                <div className="flex items-start gap-4 w-full">
+                    {/* Icon */}
+                    <div className="flex-shrink-0 p-2 border border-border-color bg-dark-gray-3 rounded-lg group-hover:bg-dark-gray-4 transition-colors duration-300">
+                        <div className="w-8 h-8 relative">
+                            <Image 
+                                src={service.icon} 
+                                alt={service.title} 
+                                width={32}
+                                height={32}
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                        <div className="flex justify-between items-start gap-2">
+                            <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-light-gray-3 transition-colors duration-300 line-clamp-2">
+                                {service.title}
+                            </h3>
+                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <Image 
+                                    src={rightArrow} 
+                                    alt="arrow" 
+                                    width={18}
+                                    height={18}
+                                    className="group-hover:rotate-45 transition-transform duration-500"
+                                />
+                            </div>
+                        </div>
+                        
+                        <p className="mt-2 text-light-gray-2 text-sm md:text-base group-hover:text-light-gray-3 transition-colors duration-300 line-clamp-3">
+                            {service.description}
+                        </p>
+                    </div>
+                </div>
+            </Link>
+        </motion.li>
     )
 }

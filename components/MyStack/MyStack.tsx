@@ -8,111 +8,144 @@ import { motion } from 'framer-motion'
 
 const myStack = [
   {
+    id: 0,
+    logo: '/solana-logo.png',
+    title: "Solana/Rust",
+    description: "Smart contracts, Anchor framework",
+    link: "https://solana.com/"
+  },
+  {
     id: 1,
-    logo: '/javascript-logo.png', // Add appropriate logo
-    title: "JavaScript/TypeScript",
-    description: "Full-stack development with React, Next.js, Node.js",
-    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    logo: '/typescript-logo.png',
+    title: "TypeScript",
+    description: "React, Next.js, Node.js",
+    link: "https://www.typescriptlang.org/"
   },
   {
     id: 2,
-    logo: '/python-logo.png',
-    title: "Python",
-    description: "Flask, AI applications, Manim animations",
-    link: "https://www.python.org/"
-  },
-  {
-    id: 3,
     logo: '/solidity-logo.png',
     title: "Solidity",
-    description: "Ethereum, Polygon, Smart Contracts",
+    description: "Ethereum, Polygon contracts",
     link: "https://soliditylang.org/"
   },
   {
-    id: 4,
+    id: 3,
     logo: '/web3-logo.png',
     title: "Web3",
-    description: "Ethers.js, Web3.js, Hardhat, Truffle",
+    description: "Ethers.js, Hardhat",
     link: "https://web3js.readthedocs.io/"
   },
   {
-    id: 5,
+    id: 4,
     logo: '/database-logo.png',
     title: "Databases",
-    description: "MongoDB, PostgreSQL, Supabase, Firebase",
+    description: "MongoDB, PostgreSQL",
     link: "https://www.mongodb.com/"
   },
   {
-    id: 6,
+    id: 5,
     logo: '/devops-logo.png',
     title: "DevOps",
-    description: "Docker, GitHub Actions, Vercel, Render",
+    description: "Docker, GitHub Actions",
     link: "https://www.docker.com/"
+  },
+  {
+    id: 6,
+    logo: '/python-logo.png',
+    title: "Python",
+    description: "Flask, AI applications",
+    link: "https://www.python.org/"
   }
 ];
 
 export default function MyStack() {
     return (
-        <div className='flex items-start flex-none flex-col flex-nowrap gap-[30px] h-min justify-start overflow-visible relative w-full '>
-            <div className="flex-none h-auto relative w-full">
+        <section className='w-full px-4 sm:px-6 py-12 max-w-7xl mx-auto'>
+            <div className='flex flex-col gap-8 w-full'>
                 <SectionHeading 
                     icon={stackIcon} 
                     title='My Tech Stack' 
-                    description='Mastering cutting-edge technologies to build innovative web and blockchain solutions.' 
+                    description='Mastering cutting-edge technologies to build innovative solutions.' 
                 />
-            </div>
-            <div className="w-full">
-                <motion.ul
+                
+                <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className="grid gap-[10px] flex-none auto-rows-min h-min justify-center overflow-visible relative p-0 w-full lg:grid-cols-[repeat(2,minmax(50px,1fr))] grid-cols-1 lg:grid-rows-[repeat(2,min-content)]">
-                    {myStack?.map((stack, index) => (
-                        <motion.li
-                            key={stack.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="w-full">
-                            <Link href={stack.link} className='w-full bg-very-dark-gray border border-dark-gray-3 rounded-xl flex cursor-pointer items-center flex-nowrap gap-[10px] h-min justify-start overflow-visible relative p-[14px_24px_14px_14px] group hover:bg-almost-black transition-all duration-500'>
-                                {/* logo  */}
-                                <div className="bg-dark-gray-4 border border-border-color rounded-[7px] flex items-center flex-none flex-nowrap gap-[10px] h-min justify-center overflow-hidden p-2 relative w-min">
-                                    <div className="aspect-square flex-none h-auto overflow-hidden relative w-[30px]">
-                                        <figure className='relative inset-0 rounded-[inherit]'>
-                                            <Image 
-                                              src={stack.logo} 
-                                              alt={stack.title} 
-                                              width={30}
-                                              height={30}
-                                              className='block w-full h-full rounded-[inherit] object-cover object-center' />
-                                        </figure>
-                                    </div>
-                                </div>
-                                {/* text  */}
-                                <div className="flex items-start flex-1 flex-col flex-nowrap gap-0 h-min justify-start overflow-visible p-0 relative">
-                                    <div className="flex flex-col flex-shrink-0 flex-none h-auto relative whitespace-pre-wrap w-full break-words">
-                                        <p className='text-light-gray-4 font-semibold text-[18px]'>{stack.title}</p>
-                                    </div>
-                                    <div className="flex flex-col flex-shrink-0 flex-none h-auto relative whitespace-pre-wrap w-full break-words">
-                                        <p className='text-light-gray-2 font-medium text-[15px]'>{stack.description}</p>
-                                    </div>
-                                </div>
-                                {/* arrow  */}
-                                <div className="aspect-square flex-none h-auto w-[24px] overflow-hidden relative opacity-50 group-hover:opacity-100">
-                                    <div className="absolute rounded-full inset-0 flex items-center justify-center w-full h-full">
-                                        <Image 
-                                          src={rightArrow} 
-                                          alt='arrow' 
-                                          width={24} 
-                                          height={24} 
-                                          className='block w-full h-full rounded-full object-cover object-center transition-all duration-500 group-hover:-rotate-45' />
-                                    </div>
-                                </div>
-                            </Link>
-                        </motion.li>
-                    ))}
-                </motion.ul>
+                    className="w-full overflow-hidden"
+                >
+                    <motion.ul
+                        className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
+                    >
+                        {myStack.map((stack, index) => (
+                            <TechStackCard 
+                                key={stack.id}
+                                stack={stack}
+                                index={index}
+                            />
+                        ))}
+                    </motion.ul>
+                </motion.div>
             </div>
-        </div>
+        </section>
+    )
+}
+
+function TechStackCard({ stack, index }: { stack: any, index: number }) {
+    return (
+        <motion.li
+            key={stack.id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true, margin: "20px" }}
+            className="w-full h-full min-w-0"
+        >
+            <Link 
+                href={stack.link} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col h-full p-4 rounded-lg border border-dark-gray-3 bg-gradient-to-br from-dark-gray-3/80 to-very-dark-gray transition-all duration-300 hover:shadow-md hover:border-primary/40 overflow-hidden"
+            >
+                <div className="flex items-start gap-3 w-full">
+                    {/* Logo */}
+                    <div className="flex-shrink-0 p-2 rounded-md border border-primary/30 bg-primary/10">
+                        <div className="w-7 h-7 relative">
+                            {stack.logo ? (
+                                <Image 
+                                    src={stack.logo} 
+                                    alt={stack.title} 
+                                    width={28}
+                                    height={28}
+                                    className="object-contain"
+                                />
+                            ) : (
+                                <div className="w-full h-full bg-dark-gray-3 rounded"></div>
+                            )}
+                        </div>
+                    </div>
+                    
+                    {/* Text Content */}
+                    <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold truncate text-light-gray-1">
+                            {stack.title}
+                        </h3>
+                        <p className="text-light-gray-2 text-sm mt-1 line-clamp-2">
+                            {stack.description}
+                        </p>
+                    </div>
+                    
+                    {/* Arrow Indicator */}
+                    <div className="flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                        <Image 
+                            src={rightArrow} 
+                            alt="arrow" 
+                            width={16} 
+                            height={16} 
+                            className="mt-1"
+                        />
+                    </div>
+                </div>
+            </Link>
+        </motion.li>
     )
 }

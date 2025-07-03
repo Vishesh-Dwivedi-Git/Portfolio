@@ -1,6 +1,5 @@
 import { Mail, User, Zap } from "lucide-react";
 import {
-  asanaIcon,
   athonLogo,
   client_1,
   client_2,
@@ -215,13 +214,7 @@ export const myStack: myStackTypes[] = [
     logo: slackIcon,
     link: "https://slack.com",
   },
-  {
-    id: 6,
-    title: "Asana",
-    description: "Productivity Tool",
-    logo: asanaIcon,
-    link: "https://www.asana.com",
-  }
+ 
 ]
 
 export const myServices: myServicesTypes[] = [
