@@ -1,4 +1,4 @@
-import AvatarMe from "@assets/profile.png";
+import AvatarMe from "@assets/Profile_Port (1).png";
 import handGif from "@assets/handGif.svg";
 
 import discord from "@assets/discord.svg";

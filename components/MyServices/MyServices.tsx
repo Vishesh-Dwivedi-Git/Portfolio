@@ -5,32 +5,36 @@ import { rightArrow, zapIcon } from '@/app/assets/assets'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import fullstack from "../../app/assets/fullstack-removebg-preview.png";
+import Ai from "../../app/assets/Ai-removebg-preview.png";
+import blockchain from "../../app/assets/block-removebg-preview.png";
+import Tech from "../../app/assets/tech-removebg-preview.png"
 
 const myServices = [
   {
     id: 1,
-    icon: '/web-development-icon.png',
+    icon: fullstack,
     title: "Full Stack Development",
     description: "Building responsive web applications with React, Next.js, and Node.js. Experience serving 500+ daily users with optimized performance.",
     link: "#projects"
   },
   {
     id: 2,
-    icon: '/ai-icon.png',
+    icon: Ai,
     title: "AI Solutions",
     description: "Developing AI-powered applications like animation generators with 90% user satisfaction and 75% faster rendering.",
     link: "#projects"
   },
   {
     id: 3,
-    icon: '/blockchain-icon.png',
+    icon: blockchain,
     title: "Blockchain Development",
     description: "Building decentralized applications on Ethereum, Polygon, and Solana. Created gas-efficient smart contracts handling 500+ transactions.",
     link: "#projects"
   },
   {
     id: 4,
-    icon: '/workshop-icon.png',
+    icon: Tech,
     title: "Technical Mentorship",
     description: "Conducting workshops and mentoring students in blockchain development with 92% completion rate.",
     link: "#experience"

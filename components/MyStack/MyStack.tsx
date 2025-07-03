@@ -5,53 +5,61 @@ import { rightArrow, stackIcon } from '@/app/assets/assets'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import solanaLogo from '../../app/assets/solana.png';
+import react from '../../app/assets/react-removebg-preview.png'
+import Etherium from '../../app/assets/ether-removebg-preview.png'
+import web3 from '../../app/assets/WEB3.0-removebg-preview.png'
+import mongo from '../../app/assets/mongo-removebg-preview.png';
+import docker from "../../app/assets/dock-removebg-preview.png"
+import python from "../../app/assets/pyhton-removebg-preview.png"
+
 
 const myStack = [
   {
     id: 0,
-    logo: '/solana-logo.png',
+    logo: solanaLogo,
     title: "Solana/Rust",
     description: "Smart contracts, Anchor framework",
     link: "https://solana.com/"
   },
   {
     id: 1,
-    logo: '/typescript-logo.png',
+    logo: react,
     title: "TypeScript",
     description: "React, Next.js, Node.js",
     link: "https://www.typescriptlang.org/"
   },
   {
     id: 2,
-    logo: '/solidity-logo.png',
+    logo: Etherium,
     title: "Solidity",
     description: "Ethereum, Polygon contracts",
     link: "https://soliditylang.org/"
   },
   {
     id: 3,
-    logo: '/web3-logo.png',
+    logo: web3,
     title: "Web3",
     description: "Ethers.js, Hardhat",
     link: "https://web3js.readthedocs.io/"
   },
   {
     id: 4,
-    logo: '/database-logo.png',
+    logo:mongo,
     title: "Databases",
     description: "MongoDB, PostgreSQL",
     link: "https://www.mongodb.com/"
   },
   {
     id: 5,
-    logo: '/devops-logo.png',
-    title: "DevOps",
+    logo: docker,
+    title: "Devops",
     description: "Docker, GitHub Actions",
     link: "https://www.docker.com/"
   },
   {
     id: 6,
-    logo: '/python-logo.png',
+    logo: python,
     title: "Python",
     description: "Flask, AI applications",
     link: "https://www.python.org/"
