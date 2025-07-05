@@ -26,18 +26,12 @@ const counterLists = [
   },
   {
     id: 4,
-    value: 750,
-    title: "Students Mentored",
-    description: "Through GDSC workshops"
-  },
-  {
-    id: 5,
     value: 400,
     title: "DSA Problems",
     description: "Solved on coding platforms"
   },
   {
-    id: 6,
+    id: 5,
     value: 3,
     title: "Hackathon Wins",
     description: "Including international competitions"

@@ -60,7 +60,9 @@ import Anonymous from "@assets/Anonymous.png";
 import aiMagic from "@assets/animagic.png";
 import CarbonTrade from "@assets/CarbonTrade.png";
 import solonautics from "@assets/solonautics.png";
+import trophyIcon from "@assets/trophy.png"
 export {
+  trophyIcon,
   DocDash,
   Anonymous,
   aiMagic,

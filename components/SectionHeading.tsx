@@ -1,9 +1,9 @@
 "use client"
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion"
 interface Props {
-    icon: string,
+    icon: StaticImageData,
     title: string,
     description: string,
     children?: React.ReactNode

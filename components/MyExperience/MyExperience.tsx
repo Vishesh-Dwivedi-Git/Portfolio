@@ -11,8 +11,8 @@ const myExperience = [
     logo: '/iit-delhi-logo.png',
     company: "GATICIAN, IIT Delhi",
     link: "https://iitdelhi.ac.in",
-    label: "Full-time",
-    year: "Apr 2025 - Present",
+    label: " ",
+    year: "Apr 2025 - Jun2025",
     title: "Full Stack Intern",
     description: "Built 15+ responsive React.js components serving 500+ daily users. Integrated 8 RESTful APIs and developed analytics dashboard processing 10,000+ data points, reducing report generation time by 60%. Optimized website performance achieving 95+ Lighthouse score.",
     highlights: [
@@ -24,9 +24,9 @@ const myExperience = [
   {
     id: 2,
     logo: '/gdsc-logo.png',
-    company: "Google Developer Student Club",
+    company: "Google Developers Group",
     link: "https://gdsc.community.dev/indian-institute-of-information-technology-dharwad",
-    label: "Part-time",
+    label: "Full-time",
     year: "Aug 2024 - Present",
     title: "Web3 Blockchain Developer",
     description: "Conducted 5 workshops reaching 750+ attendees with 92% completion rate. Mentored 12 students delivering 4 blockchain projects with combined 15,000+ lines of Solidity code.",

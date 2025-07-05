@@ -4,6 +4,7 @@ import MyServices from '@/components/MyServices/MyServices'
 import MyStack from '@/components/MyStack/MyStack'
 import ShowCase from '@/components/ShowCase'
 import React from 'react'
+import Achievements from '@/components/Achievement/Achievement'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <MyExperience />
         <ShowCase/>
+        <Achievements/>
         <MyStack />
         <MyServices />
         
