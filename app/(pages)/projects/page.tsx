@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 const fullProjects = [
   {
     id: 1,
-    title: "Animagic AI",
+    title: "aiMagic.2d",
     description: "AI-powered 2D animation generator processing 200+ prompts daily with 90% user satisfaction. Reduced generation time by 75% using segmented rendering with Manim.",
     techStack: {
       frontend: ["Next.js", "React", "Tailwind CSS"],
@@ -18,8 +18,9 @@ const fullProjects = [
       infrastructure: ["Vercel", "Docker"]
     },
     links: [
-      { type: "github", url: "github.com/yourusername/animagic" },
-      { type: "demo", url: "animagic.vercel.app" }
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/aiMagic.2d" },
+      { type: "Live", url: "aimagic2d.vercel.app" },
+      {type:"demo", url:"https://www.loom.com/share/b5e7e05e132642afb39f546381671d2c?sid=a8d050a2-aa09-4e74-baf4-cc67c595af50"}
     ],
     metrics: [
       { label: "Daily Users", value: "200+" },
@@ -38,8 +39,8 @@ const fullProjects = [
       storage: ["IPFS", "Filecoin"]
     },
     links: [
-      { type: "github", url: "github.com/yourusername/carbon-trade" },
-      { type: "demo", url: "carbon-trade.xyz" }
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/Carbon-Credit" },
+      { type: "Live", url: "carbon-credit-nine.vercel.app" }
     ],
     metrics: [
       { label: "Transactions", value: "500+" },
@@ -59,8 +60,8 @@ const fullProjects = [
       storage: ["Cloudinary"]
     },
     links: [
-      { type: "github", url: "github.com/yourusername/docdash" },
-      { type: "demo", url: "docdash-app.vercel.app" }
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/DocDash" },
+      { type: "Live", url: "doc-dash-phi.vercel.app" }
     ],
     metrics: [
       { label: "Users", value: "150+" },
@@ -79,7 +80,8 @@ const fullProjects = [
       database: ["MongoDB"]
     },
     links: [
-      { type: "github", url: "github.com/yourusername/anonymous-chat" }
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/AnonymosChat" },
+        { type: "Live", url: "anonymos-chat.vercel.app" }
     ],
     metrics: [
       { label: "Chat Rooms", value: "15+" },
@@ -88,47 +90,32 @@ const fullProjects = [
     ]
   },
   {
-    id: 5,
-    title: "HealthTrack Pro",
-    description: "AI-powered health monitoring platform that analyzes wearable device data with 95% accuracy in anomaly detection.",
-    techStack: {
-      frontend: ["React Native", "Expo"],
-      backend: ["Python", "FastAPI"],
-      ai: ["TensorFlow", "Scikit-learn"],
-      database: ["Firebase"],
-      analytics: ["Tableau", "BigQuery"]
-    },
-    links: [
-      { type: "github", url: "github.com/yourusername/healthtrack" },
-      { type: "demo", url: "healthtrack.app" }
-    ],
-    metrics: [
-      { label: "Users", value: "1.2K+" },
-      { label: "Accuracy", value: "95%" },
-      { label: "Response Time", value: "<1s" }
-    ]
+  id: 6,
+  title: "Solonautics",
+  description: "Dominate 𝐒𝐨𝐥𝐚𝐧𝐚 with 𝐒𝐨𝐥𝐚𝐧𝐚𝐮𝐭𝐢𝐜𝐬 – a whale wallet tracking system with a powerful Telegram bot. It delivers razor-sharp insights on smart money, top liquidity pools, and real-time alerts.",
+  techStack: {
+    frontend: ["Next.js", "TypeScript"],
+    bot: ["Telegram Bot API", "Node.js"],
+    backend: ["NestJS", "Solscan API"],
+    database: ["PostgreSQL", "Redis"],
+    messaging: ["Webhooks"]
   },
-  {
-    id: 6,
-    title: "EduVerse",
-    description: "Virtual classroom platform supporting 500+ concurrent users with real-time collaboration tools and AI-powered tutoring.",
-    techStack: {
-      frontend: ["Next.js", "TypeScript"],
-      realtime: ["WebRTC", "Socket.io"],
-      backend: ["Node.js", "NestJS"],
-      ai: ["GPT-4", "LangChain"],
-      database: ["PostgreSQL", "Redis"]
-    },
-    links: [
-      { type: "github", url: "github.com/yourusername/eduverse" },
-      { type: "demo", url: "eduverse.tech" }
-    ],
-    metrics: [
-      { label: "Concurrent Users", value: "500+" },
-      { label: "Latency", value: "<200ms" },
-      { label: "Engagement", value: "85%" }
-    ]
-  }
+  links: [
+    { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/Solanautics" },
+    { type: "demo", url: "https://www.loom.com/share/9f1c5a2fea9240f5a46d0d2b3f05d529?sid=a9b14fe6-c8ca-4c11-95f3-b8cc3d0d92cf" }
+  ],
+  metrics: [
+    { label: "Tracked Wallets", value: "1,000+" },
+    { label: "Alert Latency", value: "<100ms" },
+    { label: "User Engagement", value: "90%" }
+  ],
+  features: [
+    "🔥 Track smart money & high-value wallets in real time",
+    "🚨 Set wild price, volatility, and custom range alerts",
+    "💧 Monitor top liquidity pools 24/7 like a beast"
+  ]
+}
+
 ];
 
 export default function ServicesPage() {
