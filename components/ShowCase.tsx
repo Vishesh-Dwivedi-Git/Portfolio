@@ -11,7 +11,7 @@ const myShowCases = [
   {
     id: 1,
     image: aiMagic,
-    title: "Animagic AI",
+    title: "aiMagi.2d",
     github: "github.com/Vishesh-Dwivedi-Git/Animagic.ai",
     Live: "animagic.vercel.app",
     demo:"www.loom.com/share/b5e7e05e132642afb39f546381671d2c?sid=a8d050a2-aa09-4e74-baf4-cc67c595af50",
