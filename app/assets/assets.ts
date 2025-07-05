@@ -55,7 +55,17 @@ import multiplyIcon from "@assets/multiply.svg";
 import instagramIcon from "@assets/instagram.svg";
 import linkedInIcon from "@assets/linkedin.svg";
 import dribbleIcon from "@assets/dribble-icon.svg";
+import DocDash from "@assets/DocDash.png";
+import Anonymous from "@assets/Anonymous.png";
+import aiMagic from "@assets/animagic.png";
+import CarbonTrade from "@assets/CarbonTrade.png";
+import solonautics from "@assets/solonautics.png";
 export {
+  DocDash,
+  Anonymous,
+  aiMagic,
+  CarbonTrade,
+  solonautics,
   AvatarMe,
   handGif,
   discord,

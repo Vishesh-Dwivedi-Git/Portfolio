@@ -72,7 +72,8 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 100, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="flex items-start flex-none flex-nowrap w-full gap-5 h-min justify-start p-0 relative">
+                        className="flex items-start flex-wrap w-full gap-5 h-min justify-start p-0 relative min-w-[200px]"
+                    >
                         <Button onClick={handleEmailClick} position='left' icon={<Mail size={18} />} title='Email Me' />
                         <Button 
                             onClick={handleDownloadResume} 

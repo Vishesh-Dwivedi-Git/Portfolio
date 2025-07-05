@@ -1,5 +1,5 @@
 "use client"
-import { zapIcon } from '@/app/assets/assets'
+import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic } from '@/app/assets/assets'
 import SectionHeading from '@/components/SectionHeading'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,7 +11,7 @@ const fullProjects = [
     id: 1,
     title: "aiMagic.2d",
     description: "AI-powered 2D animation generator processing 200+ prompts daily with 90% user satisfaction. Reduced generation time by 75% using segmented rendering with Manim.",
-    image: "/projects/aimagic2d.jpg",
+    image: aiMagic,
     techStack: {
       frontend: ["Next.js", "React", "Tailwind CSS"],
       backend: ["Python", "Flask", "Manim"],
@@ -33,7 +33,7 @@ const fullProjects = [
     id: 2,
     title: "CarbonTrade",
     description: "Blockchain-based carbon credit marketplace reducing verification time by 80% with gas-efficient smart contracts on Polygon.",
-    image: "/projects/carbontrade.jpg",
+    image: CarbonTrade,
     techStack: {
       blockchain: ["Solidity", "Ethers.js", "Polygon"],
       frontend: ["Next.js", "React", "Web3.js"],
@@ -54,7 +54,7 @@ const fullProjects = [
     id: 3,
     title: "DocDash",
     description: "Document management system with vector-based search using OpenAI embeddings, reducing query time from 5s to 1.2s.",
-    image: "/projects/docdash.jpg",
+    image: DocDash,
     techStack: {
       frontend: ["React", "Material UI"],
       backend: ["Node.js", "Express"],
@@ -76,7 +76,7 @@ const fullProjects = [
     id: 4,
     title: "Anonymous Chat",
     description: "Privacy-focused chat application with end-to-end encryption using Ethereum key derivation and AES-256.",
-    image: "/projects/anonymouschat.jpg",
+    image: Anonymous,
     techStack: {
       frontend: ["React", "Socket.io"],
       cryptography: ["AES-256", "Ethers.js"],
@@ -97,7 +97,7 @@ const fullProjects = [
     id: 6,
     title: "Solonautics",
     description: "Dominate 𝐒𝐨𝐥𝐚𝐧𝐚 with 𝐒𝐨𝐥𝐚𝐧𝐚𝐮𝐭𝐢𝐜𝐬 – a whale wallet tracking system with a powerful Telegram bot. It delivers razor-sharp insights on smart money, top liquidity pools, and real-time alerts.",
-    image: "/projects/solonautics.jpg",
+    image: solonautics,
     techStack: {
       frontend: ["Next.js", "TypeScript"],
       bot: ["Telegram Bot API", "Node.js"],
@@ -122,7 +122,7 @@ const fullProjects = [
   }
 ];
 
-export default function ServicesPage() {
+export default function Projects() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -168,22 +168,21 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: project.id * 0.05 }}
                 whileHover={{ y: -5 }}
-                className="bg-very-dark-gray border border-dark-gray-3 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 flex flex-col h-full relative"
+                className="bg-very-dark-gray border border-dark-gray-3 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 flex flex-col h-full"
               >
-                {/* Background Image with Overlay */}
-                <div className="absolute inset-0">
+                {/* Project Image */}
+                <div className="relative w-full h-48">
                   <Image
                     src={project.image}
-                    alt={`${project.title} background`}
+                    alt={`${project.title} preview`}
                     fill
-                    className="object-cover opacity-20"
+                    className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-very-dark-gray/80" />
                 </div>
 
                 {/* Content */}
-                <div className="relative p-6 flex flex-col h-full">
+                <div className="p-6 flex flex-col h-full">
                   <div className="space-y-5 flex-grow">
                     {/* Project Header */}
                     <div className="flex justify-between items-start">

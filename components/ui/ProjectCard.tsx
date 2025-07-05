@@ -1,17 +1,18 @@
 "use client"
 import { motion } from "framer-motion"
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import {  linkIcon } from '@/app/assets/assets'
 
 type ProjectItem = {
-    image: string;
+    image: StaticImageData;
     title: string;
     type: string;
     tech: string;
     description: string;
     github: string;
-    demo: string;
+    demo?: string;
+    Live:string;
 };
 
 export default function ProjectCard({ item, index }: { item: ProjectItem, index: number }) {
@@ -73,6 +74,22 @@ export default function ProjectCard({ item, index }: { item: ProjectItem, index:
                         </Link>
                         
                         <Link
+                            href={`https://${item.Live}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-dark-gray-4 hover:bg-primary/10 border border-dark-gray-3 hover:border-primary/30 transition-all duration-300"
+                        >
+                            <Image 
+                                src={linkIcon} 
+                                alt="Live Demo" 
+                                width={16} 
+                                height={16} 
+                                className="opacity-80"
+                            />
+                            <span>Live</span>
+                        </Link>
+                        {
+                            item.demo && <Link
                             href={`https://${item.demo}`}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -85,8 +102,10 @@ export default function ProjectCard({ item, index }: { item: ProjectItem, index:
                                 height={16} 
                                 className="opacity-80"
                             />
-                            <span>Live Demo</span>
+                            <span>Demo</span>
                         </Link>
+                           
+                        }
                     </div>
                 </div>
             </div>
