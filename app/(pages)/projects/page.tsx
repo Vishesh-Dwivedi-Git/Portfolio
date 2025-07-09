@@ -1,5 +1,5 @@
 "use client"
-import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic } from '@/app/assets/assets'
+import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic ,calenderAi } from '@/app/assets/assets'
 import SectionHeading from '@/components/SectionHeading'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -119,7 +119,29 @@ const fullProjects = [
       "🚨 Set wild price, volatility, and custom range alerts",
       "💧 Monitor top liquidity pools 24/7 like a beast"
     ]
-  }
+  },
+  {
+  id: 2,
+  title: "calender0Talk",
+  description: "Conversational calendar assistant powered by LangChain & Mistral AI. Handles booking, availability, and scheduling with intelligent time parsing and Google Calendar integration.",
+  image: calenderAi, // replace with actual variable or image path
+  techStack: {
+    frontend: ["Streamlit", "HTML", "Tailwind CSS"],
+    backend: ["FastAPI", "LangChain", "Google Calendar API"],
+    infrastructure: ["Railway", "GitHub","streamlit cloud", "Google Cloud"]
+  },
+  links: [
+    { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/Tailor-Talk-Conversational-ai-" },
+    { type: "Live", url: "https://calender0talk.streamlit.app" },  // Replace with actual URL if different
+    { type: "demo", url: "https://www.loom.com/share/your-loom-id" }     // Replace with actual Loom demo link
+  ],
+  metrics: [
+    { label: "Booking Success", value: "95%" },
+    { label: "Supported Commands", value: "10+" },
+    { label: "Calendar Sync", value: "Real-time" }
+  ]
+}
+
 ];
 
 export default function Projects() {

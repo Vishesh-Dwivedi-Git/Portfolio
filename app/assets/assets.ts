@@ -61,7 +61,9 @@ import aiMagic from "@assets/animagic.png";
 import CarbonTrade from "@assets/CarbonTrade.png";
 import solonautics from "@assets/solonautics.png";
 import trophyIcon from "@assets/trophy.png"
+import calenderAi from "@assets/calenderAi.png"
 export {
+  calenderAi,
   trophyIcon,
   DocDash,
   Anonymous,
