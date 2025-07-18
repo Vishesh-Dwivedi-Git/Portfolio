@@ -19,7 +19,7 @@ export default function Hero() {
 
     const handleDownloadResume = () => {
         // Replace with your actual resume PDF URL
-        const resumeUrl = 'https://drive.google.com/file/d/14H-68kt-Q482ugwc1uWHXllpbJ2ZJ8mt/view?usp=sharing';
+        const resumeUrl = 'https://drive.google.com/file/d/1IbcTg8ugjzdBqQd8VnzqHWro_AtMNdPN/view?usp=sharing';
         window.open(resumeUrl, '_blank');
     };
 

@@ -8,41 +8,54 @@ import { motion } from 'framer-motion'
 const achievements = [
   {
     id: 0,
-    title: "Solana Redacted Hackathon",
-    description: "Won the International Solana Redacted Hackathon among 10,000+ participants, securing a $500 USDC prize.",
+    title: "Adobe India Hackathon",
+    description: "Ranked in the top 1.5% among 260,000+ participants in Adobe India Hackathon.",
     icon: trophyIcon,
   },
   {
     id: 1,
+    title: "Solana Redacted Hackathon",
+    description: "Won the International Solana Redacted Hackathon among 100,000+ participants, securing a $500 USDC prize.",
+    icon: trophyIcon,
+  },
+  {
+    id: 2,
+    title: "Citrea Hackathon",
+    description: "Selected among 100,000+ participants and secured the Wave Hack Grant for building an NFT-based time-locked capsule platform.",
+    icon: trophyIcon,
+  },
+  {
+    id: 3,
     title: "Hack2Crack National Hackathon",
     description: "Secured top 0.5% at the Hack2Crack National Level Hackathon among 1,000+ participants.",
     icon: trophyIcon,
   },
   {
-    id: 2,
-    title: "Competitive Programming Rank",
-    description: "Ranked 1200 among 24,000 participants in a highly competitive programming contest.",
-    icon: trophyIcon,
-  },
-  {
-    id: 3,
-    title: "AccelerateAI Hackathon 2025",
-    description: "Selected for the AccelerateAI Hackathon 2025, ranking in the top 3 among 100+ applicants.",
-    icon: trophyIcon,
-  },
-  {
     id: 4,
-    title: "DSA Problem Solving",
-    description: "Solved over 400 Data Structures and Algorithms problems across LeetCode, CodeChef, and GeeksForGeeks.",
+    title: "AccelerateAI Hackathon 2025",
+    description: "Ranked in the top 3 among 100+ teams in the AccelerateAI Hackathon 2025.",
     icon: trophyIcon,
   },
   {
     id: 5,
+    title: "Competitive Programming Rank",
+    description: "Ranked 1,200 among 24,000+ participants in a highly competitive programming contest.",
+    icon: trophyIcon,
+  },
+  {
+    id: 6,
+    title: "DSA Problem Solving",
+    description: "Solved 400+ Data Structures and Algorithms problems across LeetCode, CodeChef, and GeeksForGeeks.",
+    icon: trophyIcon,
+  },
+  {
+    id: 7,
     title: "JEE 2023",
-    description: "Achieved top 3%ile in the JEE 2023, a prestigious national engineering entrance exam.",
+    description: "Achieved top 3%ile in JEE 2023, a prestigious national engineering entrance exam.",
     icon: trophyIcon,
   },
 ];
+
 
 export default function Achievements() {
   return (
