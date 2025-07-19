@@ -32,7 +32,7 @@ const counterLists = [
   },
   {
     id: 5,
-    value: 3,
+    value: 5,
     title: "Hackathon Wins",
     description: "Including international competitions"
   }
