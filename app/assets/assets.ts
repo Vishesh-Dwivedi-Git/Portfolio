@@ -11,6 +11,9 @@ import spotify from "@assets/spotify.svg";
 import twitter from "@assets/twitter.svg";
 import youtube from "@assets/youtube.svg";
 
+import DocumentIntelligence from "@assets/Document-Inelliigence.png";
+import Wanderify from "@assets/wandryFi.png";
+import CapsuleX from "@assets/CapsuleX.png";
 import briefcaseIconley from "@assets/briefcase-icon.svg";
 import vortexLogo from "@assets/vortex-logo.svg";
 import pixelworksLogo from "@assets/pixelworks-logo.svg";
@@ -118,4 +121,7 @@ export {
   instagramIcon,
   linkedInIcon,
   dribbleIcon,
+  DocumentIntelligence,
+  Wanderify,  
+  CapsuleX,
 };

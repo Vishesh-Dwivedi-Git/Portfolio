@@ -1,5 +1,5 @@
 "use client"
-import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic ,calenderAi } from '@/app/assets/assets'
+import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic ,calenderAi,CapsuleX,Wanderify,DocumentIntelligence } from '@/app/assets/assets'
 import SectionHeading from '@/components/SectionHeading'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -94,7 +94,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 6,
+    id: 5,
     title: "Solonautics",
     description: "Dominate 𝐒𝐨𝐥𝐚𝐧𝐚 with 𝐒𝐨𝐥𝐚𝐧𝐚𝐮𝐭𝐢𝐜𝐬 – a whale wallet tracking system with a powerful Telegram bot. It delivers razor-sharp insights on smart money, top liquidity pools, and real-time alerts.",
     image: solonautics,
@@ -121,7 +121,7 @@ const fullProjects = [
     ]
   },
   {
-  id: 2,
+  id: 6,
   title: "calender0Talk",
   description: "Conversational calendar assistant powered by LangChain & Mistral AI. Handles booking, availability, and scheduling with intelligent time parsing and Google Calendar integration.",
   image: calenderAi, // replace with actual variable or image path
@@ -140,7 +140,85 @@ const fullProjects = [
     { label: "Supported Commands", value: "10+" },
     { label: "Calendar Sync", value: "Real-time" }
   ]
-}
+} ,
+{
+  id: 7,
+  title: "Wandrify",
+  description: "A Travel-to-Earn Web3 dApp that transforms real-world journeys into verifiable on-chain adventures with a sustainable, circular economy.",
+  image: Wanderify, // replace with actual variable or image path
+  techStack: {
+    frontend: ["Next.js", "React", "Tailwind CSS"],
+    backend: ["Node.js", "Express", "Vercel"],
+    blockchain: ["Solidity", "Foundry", "Monad Testnet"]
+  },
+  links: [
+    { type: "github", "url": "https://github.com/Vishesh-Dwivedi-Git/WandryFi" },
+    { type: "live", "url": "https://wanderify-demo.vercel.app" },
+    { type: "demo", "url": "https://www.loom.com/share/your-loom-video-id" }
+  ],
+metrics: [
+    { label: "Journeys Completed", "value": "150+" },
+    { label: "Total Value Staked", "value": ">500 MONAD" },
+    { label: "NFT Badges Minted", "value": "150+" }
+  ]
+
+  },
+  {
+  id: 8,
+  title: "AI-Powered Document Intelligence System",
+  description: "Backend system built for Adobe India Hackathon 2025 that extracts structured outlines from PDFs and performs persona-driven document analysis. Processes up to 50-page PDFs in under 10 seconds with high-accuracy heading detection and intelligent content ranking.",
+  image: DocumentIntelligence,
+  techStack: {
+    backend: ["Python", "FastAPI", "Docker"],
+    ai: ["Natural Language Processing", "Document Structure Analysis", "Machine Learning Models (<200MB)"],
+    processing: ["PDF Text Extraction", "Hierarchical Parsing", "PyMuPDF"],
+    infrastructure: ["Docker", "AMD64 Architecture", "Offline Processing"],
+    future: ["React", "Adobe PDF Embed API"] // For Round 2
+  },
+  links: [
+    { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/adobe1aHybrid" },
+    { type: "Demo", url: "https://youtu.be/A_VfTeD94Rg?si=-slKerhStHfWWWE4" }, // replace with actual FastAPI docs
+  ],
+  metrics: [
+    { label: "Processing Speed", value: "<10 seconds" },
+    { label: "Document Capacity", value: "50 pages" },
+    { label: "Model Efficiency", value: "<200MB" },
+    { label: "Architecture", value: "CPU-optimized" }
+  ],
+  features: [
+    "Automated PDF structure extraction (Title, H1, H2, H3)",
+    "Persona-driven document analysis and ranking",
+    "Hierarchical outline generation in JSON format",
+    "Multi-document collection processing (3-10 PDFs)",
+    "Section relevance scoring based on user persona",
+    "Offline processing with zero network dependencies"
+  ],
+
+
+  },
+  {
+    id: 9,
+    title: "CapsuleX",
+    description: "Blockchain-based NFT capsule platform allowing users to lock digital assets or messages and release them at a scheduled time. Supports 1,000+ concurrent capsules.",
+    image: CapsuleX,
+    techStack: {
+      frontend: ["Next.js", "React", "Tailwind CSS"],
+      backend: ["Node.js", "Express", "Solana Web3.js"],
+      blockchain: ["Solana", "Metaplex"],
+      database: ["MongoDB"],
+      infrastructure: ["Vercel", "Docker"]
+    },
+    links: [
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/CapsuleX" },
+      { type: "Live", url: "https://capsule-x.vercel.app" },
+      { type: "demo", url: "https://www.loom.com/share/your-loom-id" } // replace with actual
+    ],
+    metrics: [
+      { label: "Capsules Created", value: "1,000+" },
+      { label: "Concurrent Users", value: "500+" },
+      { label: "Blockchain Transactions", value: "2,000+" }
+    ]
+  }
 
 ];
 
