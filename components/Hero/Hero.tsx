@@ -19,8 +19,16 @@ export default function Hero() {
 
     const handleDownloadResume = () => {
         // Replace with your actual resume PDF URL
-        const resumeUrl = 'https://drive.google.com/file/d/1alnMEh4osiQQDOndLgOOJLSG7wMLLjmm/view';
+        const resumeUrl = 'https://drive.google.com/file/d/1saQGMnZPScChtoKjUb3QA_HfStFQYC4d/view?usp=sharing';
         window.open(resumeUrl, '_blank');
+    };
+
+    const handleLeetCodeClick = () => {
+        window.open('https://leetcode.com/u/visheshdwi225544', '_blank');
+    };
+
+    const handleGfGClick = () => {
+        window.open('https://www.geeksforgeeks.org/user/visheshdwivpsh6', '_blank');
     };
 
     return (
@@ -81,6 +89,28 @@ export default function Hero() {
                             icon={<Download size={18} />} 
                             title='Download Resume' 
                         />
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, type: "spring", stiffness: 100, delay: 0.45 }}
+                        viewport={{ once: true }}
+                        className="flex items-center gap-3 mt-2"
+                    >
+                        <button
+                            onClick={handleLeetCodeClick}
+                            className="text-light-gray-2 hover:text-white text-sm font-medium transition-colors underline"
+                        >
+                            LeetCode
+                        </button>
+                        <span className="text-light-gray-2">|</span>
+                        <button
+                            onClick={handleGfGClick}
+                            className="text-light-gray-2 hover:text-white text-sm font-medium transition-colors underline"
+                        >
+                            GeeksforGeeks
+                        </button>
                     </motion.div>
                 </div>
             </section>
