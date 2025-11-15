@@ -26,7 +26,7 @@ const counterLists = [
   },
   {
     id: 4,
-    value: 400,
+    value: 500,
     title: "DSA Problems",
     description: "Solved on coding platforms"
   },
