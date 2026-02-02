@@ -14,20 +14,22 @@ interface SideNavbarProps {
     isMenuOpen?: boolean;
 }
 
-export default function SideNavbar({isMenuOpen}:SideNavbarProps) {
+export default function SideNavbar({ isMenuOpen }: SideNavbarProps) {
     const pathname = usePathname()
 
     return (
         <motion.div
-        initial={{ x: "-100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "-100%" }}
-        transition={{ duration: 0.5, type: "spring" }}
-        className=" absolute lg:block max-w-[13%] w-full border-r border-border-color h-screen md:sticky top-0 flex-none z-10"
-        style={{
-            left : isMenuOpen ? "0" : "-100%",
-            maxWidth: isMenuOpen ? "140px" : "13%", 
-        }}
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.5, type: "spring" }}
+            className="absolute left-[-100%] lg:left-0 lg:block max-w-[13%] w-full border-r border-border-color h-screen md:sticky top-0 flex-none z-10"
+            style={{
+                ...(isMenuOpen !== undefined && {
+                    left: isMenuOpen ? "0" : "-100%",
+                    maxWidth: isMenuOpen ? "140px" : "13%",
+                })
+            }}
         >
             <div className="flex items-end justify-between h-full flex-none flex-nowrap relative p-[20px_30px_40px_0px] flex-col">
                 {/* top */}
@@ -40,7 +42,7 @@ export default function SideNavbar({isMenuOpen}:SideNavbarProps) {
                             <Image
                                 src={AvatarMe}
                                 fill
-                                quality={100}                                
+                                quality={100}
                                 alt="Avatar"
                                 className="block w-full h-full rounded-full opacity-80 object-fill object-center"
                             />

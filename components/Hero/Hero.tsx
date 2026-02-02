@@ -17,10 +17,13 @@ export default function Hero() {
         window.open(mailtoLink, "_blank");
     };
 
-    const handleDownloadResume = () => {
-        // Replace with your actual resume PDF URL
-        const resumeUrl = 'https://drive.google.com/file/d/14vUOk0OyaRiCWcncPaWOCRsIDlcgbvrQ/view?usp=sharing';
-        window.open(resumeUrl, '_blank');
+    const handleDownloadResume = (type: 'blockchain' | 'swe') => {
+        // Replace with your actual resume PDF URLs
+        const resumeUrls = {
+            blockchain: 'https://drive.google.com/file/d/1WO_X_6zUF6cUeIuzS0LUH9B943iIgtx6/view?usp=sharing',
+            swe: 'https://drive.google.com/file/d/12qmH5f5d2ejeQ8sg2Zmp5metmaYJ0C-h/view?usp=sharing'
+        };
+        window.open(resumeUrls[type], '_blank');
     };
 
     const handleLeetCodeClick = () => {
@@ -80,15 +83,25 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, type: "spring", stiffness: 100, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="flex items-start flex-wrap w-full gap-5 h-min justify-start p-0 relative min-w-[200px]"
+                        className="flex items-start flex-wrap w-full gap-4 h-min justify-start p-0 relative min-w-[200px]"
                     >
-                        <Button onClick={handleEmailClick} position='left' icon={<Mail size={18} />} title='Email Me' />
-                        <Button 
-                            onClick={handleDownloadResume} 
-                            position='left' 
-                            icon={<Download size={18} />} 
-                            title='Download Resume' 
-                        />
+                        <Button onClick={handleEmailClick} position='left' icon={<Mail size={18} />} title='Email Me' className="w-auto" />
+                        <div className="flex gap-2 w-full sm:w-auto">
+                            <Button
+                                onClick={() => handleDownloadResume('blockchain')}
+                                position='left'
+                                icon={<Download size={18} />}
+                                title='Blockchain CV'
+                                className="w-full text-[13px]"
+                            />
+                            <Button
+                                onClick={() => handleDownloadResume('swe')}
+                                position='left'
+                                icon={<Download size={18} />}
+                                title='SWE CV'
+                                className="w-full text-[13px]"
+                            />
+                        </div>
                     </motion.div>
 
                     <motion.div

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import {  linkIcon } from '@/app/assets/assets'
+import { linkIcon } from '@/app/assets/assets'
 
 type ProjectItem = {
     image: StaticImageData;
@@ -12,7 +12,7 @@ type ProjectItem = {
     description: string;
     github: string;
     demo?: string;
-    Live:string;
+    Live: string;
 };
 
 export default function ProjectCard({ item, index }: { item: ProjectItem, index: number }) {
@@ -41,7 +41,7 @@ export default function ProjectCard({ item, index }: { item: ProjectItem, index:
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors duration-300">
                         {item.title}
                     </h3>
-                    
+
                     <div className="flex gap-2 mb-3">
                         <span className="px-2 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary">
                             {item.type}
@@ -58,7 +58,7 @@ export default function ProjectCard({ item, index }: { item: ProjectItem, index:
                     {/* Links - GitHub and Demo */}
                     <div className="mt-auto flex flex-wrap gap-2">
                         <Link
-                            href={`https://${item.github}`}
+                            href={item.github.startsWith('http') ? item.github : `https://${item.github}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-dark-gray-4 hover:bg-primary/10 border border-dark-gray-3 hover:border-primary/30 transition-all duration-300"
@@ -72,39 +72,39 @@ export default function ProjectCard({ item, index }: { item: ProjectItem, index:
                             /> */}
                             <span>Code</span>
                         </Link>
-                        
+
                         <Link
-                            href={`https://${item.Live}`}
+                            href={item.Live.startsWith('http') ? item.Live : `https://${item.Live}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-dark-gray-4 hover:bg-primary/10 border border-dark-gray-3 hover:border-primary/30 transition-all duration-300"
                         >
-                            <Image 
-                                src={linkIcon} 
-                                alt="Live Demo" 
-                                width={16} 
-                                height={16} 
+                            <Image
+                                src={linkIcon}
+                                alt="Live Demo"
+                                width={16}
+                                height={16}
                                 className="opacity-80"
                             />
                             <span>Live</span>
                         </Link>
                         {
                             item.demo && <Link
-                            href={`https://${item.demo}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-dark-gray-4 hover:bg-primary/10 border border-dark-gray-3 hover:border-primary/30 transition-all duration-300"
-                        >
-                            <Image 
-                                src={linkIcon} 
-                                alt="Live Demo" 
-                                width={16} 
-                                height={16} 
-                                className="opacity-80"
-                            />
-                            <span>Demo</span>
-                        </Link>
-                           
+                                href={item.demo.startsWith('http') ? item.demo : `https://${item.demo}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-dark-gray-4 hover:bg-primary/10 border border-dark-gray-3 hover:border-primary/30 transition-all duration-300"
+                            >
+                                <Image
+                                    src={linkIcon}
+                                    alt="Live Demo"
+                                    width={16}
+                                    height={16}
+                                    className="opacity-80"
+                                />
+                                <span>Demo</span>
+                            </Link>
+
                         }
                     </div>
                 </div>

@@ -1,5 +1,7 @@
 import AvatarMe from "@assets/Profile_Port (1).png";
 import handGif from "@assets/handGif.svg";
+import mneeCommit from "@assets/mnee-commit.png";
+import rwaOdyssee from "@assets/rwa-odyssey.png";
 
 import discord from "@assets/discord.svg";
 import dribble from "@assets/dribble.svg";
@@ -12,7 +14,7 @@ import twitter from "@assets/twitter.svg";
 import youtube from "@assets/youtube.svg";
 
 import DocumentIntelligence from "@assets/Document-Inelliigence.png";
-import Wanderify from "@assets/wandryFi.png";
+import Wanderify from "@assets/wand.png";
 import CapsuleX from "@assets/CapsuleX.png";
 import briefcaseIconley from "@assets/briefcase-icon.svg";
 import vortexLogo from "@assets/vortex-logo.svg";
@@ -66,6 +68,8 @@ import solonautics from "@assets/solonautics.png";
 import trophyIcon from "@assets/trophy.png"
 import calenderAi from "@assets/calenderAi.png"
 export {
+  mneeCommit,
+  rwaOdyssee,
   calenderAi,
   trophyIcon,
   DocDash,
@@ -122,6 +126,6 @@ export {
   linkedInIcon,
   dribbleIcon,
   DocumentIntelligence,
-  Wanderify,  
+  Wanderify,
   CapsuleX,
 };

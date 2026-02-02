@@ -1,5 +1,5 @@
 "use client"
-import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic ,calenderAi,CapsuleX,Wanderify,DocumentIntelligence } from '@/app/assets/assets'
+import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic, calenderAi, CapsuleX, Wanderify, DocumentIntelligence, mneeCommit, rwaOdyssee } from '@/app/assets/assets'
 import SectionHeading from '@/components/SectionHeading'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,6 +9,29 @@ import { motion } from "framer-motion"
 const fullProjects = [
   {
     id: 1,
+    title: "WandryFi",
+    description: "A Travel-to-Earn Web3 dApp that transforms real-world journeys into verifiable on-chain adventures with a sustainable, circular economy.",
+    image: Wanderify, // replace with actual variable or image path
+    techStack: {
+      frontend: ["Next.js", "React", "Tailwind CSS"],
+      backend: ["Node.js", "Express", "Vercel"],
+      blockchain: ["Solidity", "Foundry", "Monad Testnet"]
+    },
+    links: [
+      { type: "github", "url": "github.com/Vishesh-Dwivedi-Git/WandryFi" },
+      { type: "live", "url": "wandryfi.vercel.app/" },
+      { type: "whitepaper", "url": "drive.google.com/file/d/1D4z-rxZ9G9o0j1clXRNrR2U8MkN7Xhgh/view?usp=sharing" },
+      { type: "demo", "url": "https://www.loom.com/share/your-loom-video-id" }
+    ],
+    metrics: [
+      { label: "Journeys Completed", "value": "150+" },
+      { label: "Total Value Staked", "value": ">500 MONAD" },
+      { label: "NFT Badges Minted", "value": "150+" }
+    ]
+
+  },
+  {
+    id: 2,
     title: "aiMagic.2d",
     description: "AI-powered 2D animation generator processing 200+ prompts daily with 90% user satisfaction. Reduced generation time by 75% using segmented rendering with Manim.",
     image: aiMagic,
@@ -29,8 +52,58 @@ const fullProjects = [
       { label: "Satisfaction", value: "90%" }
     ]
   },
+
   {
-    id: 2,
+    id: 3,
+    title: "Commit Protocol (MNEE)",
+    description: "Optimistic, time-locked escrow protocol for DAO work settlement using AI agents as objective witnesses. Automates verification and payment of off-chain work with reputation-weighted dynamic staking to make disputes costly and honest work frictionless.",
+    image: mneeCommit,
+    techStack: {
+      frontend: ["Next.js", "React", "Tailwind CSS"],
+      backend: ["Node.js", "Express"],
+      blockchain: ["Solidity", "EVM"],
+      agents: ["OpenAI", "Custom Auditor Agents"],
+      storage: ["IPFS"],
+      infrastructure: ["Docker", "Vercel"]
+    },
+    links: [
+      { type: "Live", url: "mnee-commit.vercel.app/" },
+      { type: "github", url: "github.com/ayush18pop/mnee-commit" },
+      { type: "whitepaper", url: "drive.google.com/file/d/1P_Ad2zjWge_j4Ohm7VOAEoSNOaVeSjI3/view?usp=sharing" }
+    ],
+    metrics: [
+      { label: "Settlement Model", value: "Optimistic Escrow" },
+      { label: "Verification", value: "AI Agents" },
+      { label: "Dispute Cost", value: "Dynamic Staking" }
+    ]
+  }
+  ,
+  {
+    id: 4,
+    title: "RWA-Odyssée",
+    description: "Self-repaying credit line protocol where collateral yield auto-repays borrowed principal. Built for Mantle RWA ecosystem using yield-bearing assets like mETH and fBTC.",
+    image: rwaOdyssee,
+    techStack: {
+      frontend: ["Next.js", "React", "Tailwind CSS"],
+      backend: ["Node.js"],
+      blockchain: ["Solidity", "Mantle"],
+      oracles: ["Chainlink"],
+      infrastructure: ["Vercel", "Hardhat"]
+    },
+    links: [
+      { type: "github", url: "github.com/Vishesh-Dwivedi-Git/Self-Repaying-RWA-CreditLine" },
+      { type: "Live", url: "rwa-odyssee.vercel.app/" },
+      { type: "whitepaper", url: "drive.google.com/file/d/1hqqFsl56D1IFNC6dh-2nAH8oZ93GnXr2/view?usp=sharing" }
+    ],
+    metrics: [
+      { label: "Target LTV", value: "70%" },
+      { label: "Repayment Mode", value: "Auto-Yield" },
+      { label: "Hackathon", value: "ETHGlobal" }
+    ]
+  },
+
+  {
+    id: 5,
     title: "CarbonTrade",
     description: "Blockchain-based carbon credit marketplace reducing verification time by 80% with gas-efficient smart contracts on Polygon.",
     image: CarbonTrade,
@@ -51,7 +124,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 3,
+    id: 6,
     title: "DocDash",
     description: "Document management system with vector-based search using OpenAI embeddings, reducing query time from 5s to 1.2s.",
     image: DocDash,
@@ -73,7 +146,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 4,
+    id: 7,
     title: "Anonymous Chat",
     description: "Privacy-focused chat application with end-to-end encryption using Ethereum key derivation and AES-256.",
     image: Anonymous,
@@ -94,7 +167,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 5,
+    id: 8,
     title: "Solonautics",
     description: "Dominate 𝐒𝐨𝐥𝐚𝐧𝐚 with 𝐒𝐨𝐥𝐚𝐧𝐚𝐮𝐭𝐢𝐜𝐬 – a whale wallet tracking system with a powerful Telegram bot. It delivers razor-sharp insights on smart money, top liquidity pools, and real-time alerts.",
     image: solonautics,
@@ -121,83 +194,61 @@ const fullProjects = [
     ]
   },
   {
-  id: 6,
-  title: "calender0Talk",
-  description: "Conversational calendar assistant powered by LangChain & Mistral AI. Handles booking, availability, and scheduling with intelligent time parsing and Google Calendar integration.",
-  image: calenderAi, // replace with actual variable or image path
-  techStack: {
-    frontend: ["Streamlit", "HTML", "Tailwind CSS"],
-    backend: ["FastAPI", "LangChain", "Google Calendar API"],
-    infrastructure: ["Railway", "GitHub","streamlit cloud", "Google Cloud"]
-  },
-  links: [
-    { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/Tailor-Talk-Conversational-ai-" },
-    { type: "Live", url: "https://calender0talk.streamlit.app" },  // Replace with actual URL if different
-    { type: "demo", url: "https://www.loom.com/share/your-loom-id" }     // Replace with actual Loom demo link
-  ],
-  metrics: [
-    { label: "Booking Success", value: "95%" },
-    { label: "Supported Commands", value: "10+" },
-    { label: "Calendar Sync", value: "Real-time" }
-  ]
-} ,
-{
-  id: 7,
-  title: "Wandrify",
-  description: "A Travel-to-Earn Web3 dApp that transforms real-world journeys into verifiable on-chain adventures with a sustainable, circular economy.",
-  image: Wanderify, // replace with actual variable or image path
-  techStack: {
-    frontend: ["Next.js", "React", "Tailwind CSS"],
-    backend: ["Node.js", "Express", "Vercel"],
-    blockchain: ["Solidity", "Foundry", "Monad Testnet"]
-  },
-  links: [
-    { type: "github", "url": "https://github.com/Vishesh-Dwivedi-Git/WandryFi" },
-    { type: "live", "url": "https://wanderify-demo.vercel.app" },
-    { type: "demo", "url": "https://www.loom.com/share/your-loom-video-id" }
-  ],
-metrics: [
-    { label: "Journeys Completed", "value": "150+" },
-    { label: "Total Value Staked", "value": ">500 MONAD" },
-    { label: "NFT Badges Minted", "value": "150+" }
-  ]
-
-  },
-  {
-  id: 8,
-  title: "AI-Powered Document Intelligence System",
-  description: "Backend system built for Adobe India Hackathon 2025 that extracts structured outlines from PDFs and performs persona-driven document analysis. Processes up to 50-page PDFs in under 10 seconds with high-accuracy heading detection and intelligent content ranking.",
-  image: DocumentIntelligence,
-  techStack: {
-    backend: ["Python", "FastAPI", "Docker"],
-    ai: ["Natural Language Processing", "Document Structure Analysis", "Machine Learning Models (<200MB)"],
-    processing: ["PDF Text Extraction", "Hierarchical Parsing", "PyMuPDF"],
-    infrastructure: ["Docker", "AMD64 Architecture", "Offline Processing"],
-    future: ["React", "Adobe PDF Embed API"] // For Round 2
-  },
-  links: [
-    { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/adobe1aHybrid" },
-    { type: "Demo", url: "https://youtu.be/A_VfTeD94Rg?si=-slKerhStHfWWWE4" }, // replace with actual FastAPI docs
-  ],
-  metrics: [
-    { label: "Processing Speed", value: "<10 seconds" },
-    { label: "Document Capacity", value: "50 pages" },
-    { label: "Model Efficiency", value: "<200MB" },
-    { label: "Architecture", value: "CPU-optimized" }
-  ],
-  features: [
-    "Automated PDF structure extraction (Title, H1, H2, H3)",
-    "Persona-driven document analysis and ranking",
-    "Hierarchical outline generation in JSON format",
-    "Multi-document collection processing (3-10 PDFs)",
-    "Section relevance scoring based on user persona",
-    "Offline processing with zero network dependencies"
-  ],
-
-
-  },
-  {
     id: 9,
+    title: "calender0Talk",
+    description: "Conversational calendar assistant powered by LangChain & Mistral AI. Handles booking, availability, and scheduling with intelligent time parsing and Google Calendar integration.",
+    image: calenderAi, // replace with actual variable or image path
+    techStack: {
+      frontend: ["Streamlit", "HTML", "Tailwind CSS"],
+      backend: ["FastAPI", "LangChain", "Google Calendar API"],
+      infrastructure: ["Railway", "GitHub", "streamlit cloud", "Google Cloud"]
+    },
+    links: [
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/Tailor-Talk-Conversational-ai-" },
+      { type: "Live", url: "https://calender0talk.streamlit.app" },  // Replace with actual URL if different
+      { type: "demo", url: "https://www.loom.com/share/your-loom-id" }     // Replace with actual Loom demo link
+    ],
+    metrics: [
+      { label: "Booking Success", value: "95%" },
+      { label: "Supported Commands", value: "10+" },
+      { label: "Calendar Sync", value: "Real-time" }
+    ]
+  },
+  {
+    id: 10,
+    title: "AI-Powered Document Intelligence System",
+    description: "Backend system built for Adobe India Hackathon 2025 that extracts structured outlines from PDFs and performs persona-driven document analysis. Processes up to 50-page PDFs in under 10 seconds with high-accuracy heading detection and intelligent content ranking.",
+    image: DocumentIntelligence,
+    techStack: {
+      backend: ["Python", "FastAPI", "Docker"],
+      ai: ["Natural Language Processing", "Document Structure Analysis", "Machine Learning Models (<200MB)"],
+      processing: ["PDF Text Extraction", "Hierarchical Parsing", "PyMuPDF"],
+      infrastructure: ["Docker", "AMD64 Architecture", "Offline Processing"],
+      future: ["React", "Adobe PDF Embed API"] // For Round 2
+    },
+    links: [
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/adobe1aHybrid" },
+      { type: "Demo", url: "https://youtu.be/A_VfTeD94Rg?si=-slKerhStHfWWWE4" }, // replace with actual FastAPI docs
+    ],
+    metrics: [
+      { label: "Processing Speed", value: "<10 seconds" },
+      { label: "Document Capacity", value: "50 pages" },
+      { label: "Model Efficiency", value: "<200MB" },
+      { label: "Architecture", value: "CPU-optimized" }
+    ],
+    features: [
+      "Automated PDF structure extraction (Title, H1, H2, H3)",
+      "Persona-driven document analysis and ranking",
+      "Hierarchical outline generation in JSON format",
+      "Multi-document collection processing (3-10 PDFs)",
+      "Section relevance scoring based on user persona",
+      "Offline processing with zero network dependencies"
+    ],
+
+
+  },
+  {
+    id: 11,
     title: "CapsuleX",
     description: "Blockchain-based NFT capsule platform allowing users to lock digital assets or messages and release them at a scheduled time. Supports 1,000+ concurrent capsules.",
     image: CapsuleX,
@@ -245,10 +296,10 @@ export default function Projects() {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-12 space-y-16">
       {/* Header Section */}
       <section className="space-y-8">
-        <SectionHeading 
-          icon={zapIcon} 
-          title="My Services" 
-          description="Full-stack development solutions with expertise in AI, blockchain, and web technologies" 
+        <SectionHeading
+          icon={zapIcon}
+          title="My Services"
+          description="Full-stack development solutions with expertise in AI, blockchain, and web technologies"
         />
       </section>
 
@@ -262,7 +313,7 @@ export default function Projects() {
             </div>
           }>
             {fullProjects.map((project) => (
-              <motion.div 
+              <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -291,7 +342,7 @@ export default function Projects() {
                         {project.links.map((link) => (
                           <Link
                             key={`${project.id}-${link.type}`}
-                            href={`https://${link.url}`}
+                            href={link.url.startsWith('http') ? link.url : `https://${link.url}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-3 py-1.5 bg-dark-gray-4 rounded-lg hover:bg-primary/10 transition-colors flex items-center gap-1.5 text-sm min-w-fit"
@@ -314,7 +365,7 @@ export default function Projects() {
                             <p className="text-xs text-light-gray-4 capitalize">{category}</p>
                             <div className="flex flex-wrap gap-1.5">
                               {technologies.map((tech: unknown) => (
-                                <span 
+                                <span
                                   key={`${project.id}-${tech}`}
                                   className="px-2.5 py-1 text-xs rounded-full bg-dark-gray-4 text-light-gray-2"
                                 >
@@ -331,7 +382,7 @@ export default function Projects() {
                   {/* Metrics */}
                   <div className="grid grid-cols-3 gap-2 pt-4 mt-auto">
                     {project.metrics.map((metric) => (
-                      <div 
+                      <div
                         key={`${project.id}-${metric.label}`}
                         className="bg-dark-gray-3 p-2 rounded-lg text-center hover:bg-dark-gray-2 transition-colors"
                       >
