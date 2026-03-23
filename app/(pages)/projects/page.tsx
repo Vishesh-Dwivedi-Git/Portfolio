@@ -1,5 +1,5 @@
 "use client"
-import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic, calenderAi, CapsuleX, Wanderify, DocumentIntelligence, mneeCommit, rwaOdyssee } from '@/app/assets/assets'
+import { zapIcon, DocDash, CarbonTrade, solonautics, Anonymous, aiMagic, calenderAi, CapsuleX, Wanderify, DocumentIntelligence, mneeCommit, rwaOdyssee, OneStudios, StockShield } from '@/app/assets/assets'
 import SectionHeading from '@/components/SectionHeading'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,6 +9,50 @@ import { motion } from "framer-motion"
 const fullProjects = [
   {
     id: 1,
+    title: "OneStudio",
+    description: "Full-stack, zero-SDK video conferencing platform built from scratch. Native WebRTC for 1:1 P2P calls, mediasoup SFU for scalable group calls, canvas-composite local recording with P2P transfer, true E2E encryption (ECDH + AES-256-GCM), and AI meeting intelligence powered by Gemini 2.0 Flash.",
+    image: OneStudios,
+    techStack: {
+      frontend: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4"],
+      backend: ["Express 5", "Prisma 7", "Neon PostgreSQL"],
+      realtime: ["WebRTC", "mediasoup SFU", "WebSocket", "MediaPipe"],
+      devops: ["Docker", "Vercel", "Railway"]
+    },
+    links: [
+      { type: "github", url: "github.com/Vishesh-Dwivedi-Git/OneStudios" },
+      { type: "Live", url: "https://www.onestudio.ink/" },
+      { type: "whitepaper", url: "https://www.onestudio.ink/" }
+    ],
+    metrics: [
+      { label: "Participants", value: "10+" },
+      { label: "Media Cost", value: "$0" },
+      { label: "Encryption", value: "E2E" }
+    ]
+  },
+  {
+    id: 2,
+    title: "StockShield Protocol",
+    description: "Uniswap v4 Hook that protects liquidity providers in tokenized securities pools from session boundary gaps and continuous LVR extraction. Features dynamic fees (5-500 bps) driven by VPIN analysis, Gap Auction at market open capturing 70% of overnight arbitrage, and off-chain state channels via Yellow Network.",
+    image: StockShield,
+    techStack: {
+      blockchain: ["Solidity 0.8.24", "Uniswap v4", "Foundry"],
+      backend: ["TypeScript", "Node.js", "Yellow Network SDK"],
+      frontend: ["Next.js", "React", "Tailwind CSS"],
+      integrations: ["ENS", "Pyth Oracle", "Chainlink"]
+    },
+    links: [
+      { type: "github", url: "https://github.com/Vishesh-Dwivedi-Git/stockshield.eth" },
+      { type: "Live", url: "https://stockshield-eth-1ry3.vercel.app/" },
+      { type: "whitepaper", url: "https://stockshield-eth-1ry3.vercel.app/StockSheild_whitepaper.pdf" }
+    ],
+    metrics: [
+      { label: "LP Capture", value: "90% LVR" },
+      { label: "Fee Range", value: "5-500 bps" },
+      { label: "Deployed", value: "Sepolia" }
+    ]
+  },
+  {
+    id: 3,
     title: "WandryFi",
     description: "A Travel-to-Earn Web3 dApp that transforms real-world journeys into verifiable on-chain adventures with a sustainable, circular economy.",
     image: Wanderify, // replace with actual variable or image path
@@ -31,7 +75,7 @@ const fullProjects = [
 
   },
   {
-    id: 2,
+    id: 4,
     title: "aiMagic.2d",
     description: "AI-powered 2D animation generator processing 200+ prompts daily with 90% user satisfaction. Reduced generation time by 75% using segmented rendering with Manim.",
     image: aiMagic,
@@ -54,7 +98,7 @@ const fullProjects = [
   },
 
   {
-    id: 3,
+    id: 5,
     title: "Commit Protocol (MNEE)",
     description: "Optimistic, time-locked escrow protocol for DAO work settlement using AI agents as objective witnesses. Automates verification and payment of off-chain work with reputation-weighted dynamic staking to make disputes costly and honest work frictionless.",
     image: mneeCommit,
@@ -79,7 +123,7 @@ const fullProjects = [
   }
   ,
   {
-    id: 4,
+    id: 6,
     title: "RWA-Odyssée",
     description: "Self-repaying credit line protocol where collateral yield auto-repays borrowed principal. Built for Mantle RWA ecosystem using yield-bearing assets like mETH and fBTC.",
     image: rwaOdyssee,
@@ -103,7 +147,7 @@ const fullProjects = [
   },
 
   {
-    id: 5,
+    id: 7,
     title: "CarbonTrade",
     description: "Blockchain-based carbon credit marketplace reducing verification time by 80% with gas-efficient smart contracts on Polygon.",
     image: CarbonTrade,
@@ -124,7 +168,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 6,
+    id: 8,
     title: "DocDash",
     description: "Document management system with vector-based search using OpenAI embeddings, reducing query time from 5s to 1.2s.",
     image: DocDash,
@@ -146,7 +190,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 7,
+    id: 9,
     title: "Anonymous Chat",
     description: "Privacy-focused chat application with end-to-end encryption using Ethereum key derivation and AES-256.",
     image: Anonymous,
@@ -167,7 +211,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 8,
+    id: 10,
     title: "Solonautics",
     description: "Dominate 𝐒𝐨𝐥𝐚𝐧𝐚 with 𝐒𝐨𝐥𝐚𝐧𝐚𝐮𝐭𝐢𝐜𝐬 – a whale wallet tracking system with a powerful Telegram bot. It delivers razor-sharp insights on smart money, top liquidity pools, and real-time alerts.",
     image: solonautics,
@@ -194,7 +238,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 9,
+    id: 11,
     title: "calender0Talk",
     description: "Conversational calendar assistant powered by LangChain & Mistral AI. Handles booking, availability, and scheduling with intelligent time parsing and Google Calendar integration.",
     image: calenderAi, // replace with actual variable or image path
@@ -215,7 +259,7 @@ const fullProjects = [
     ]
   },
   {
-    id: 10,
+    id: 12,
     title: "AI-Powered Document Intelligence System",
     description: "Backend system built for Adobe India Hackathon 2025 that extracts structured outlines from PDFs and performs persona-driven document analysis. Processes up to 50-page PDFs in under 10 seconds with high-accuracy heading detection and intelligent content ranking.",
     image: DocumentIntelligence,
@@ -248,7 +292,7 @@ const fullProjects = [
 
   },
   {
-    id: 11,
+    id: 13,
     title: "CapsuleX",
     description: "Blockchain-based NFT capsule platform allowing users to lock digital assets or messages and release them at a scheduled time. Supports 1,000+ concurrent capsules.",
     image: CapsuleX,

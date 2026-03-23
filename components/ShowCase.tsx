@@ -1,13 +1,23 @@
 "use client"
 import React from 'react'
 import SectionHeading from './SectionHeading'
-import { flyIcon, aiMagic, mneeCommit, Wanderify } from '@/app/assets/assets'
+import { flyIcon, aiMagic, mneeCommit, Wanderify, OneStudios } from '@/app/assets/assets'
 import ProjectCard from './ui/ProjectCard'
 import Link from 'next/link'
 
 const myShowCases = [
     {
         id: 1,
+        image: OneStudios,
+        title: "OneStudio",
+        github: "github.com/Vishesh-Dwivedi-Git/OneStudios",
+        Live: "https://www.onestudio.ink/",
+        type: "Video Conferencing",
+        tech: "WebRTC, mediasoup, Next.js",
+        description: "Full-stack, zero-SDK video conferencing platform with native WebRTC, SFU-based group calls, E2E encryption, and AI meeting intelligence."
+    },
+    {
+        id: 2,
         image: Wanderify,
         title: "WandryFi",
         github: "github.com/Vishesh-Dwivedi-Git/WandryFi",
@@ -17,7 +27,7 @@ const myShowCases = [
         description: "A Travel-to-Earn Web3 dApp that transforms real-world journeys into verifiable on-chain adventures."
     },
     {
-        id: 2,
+        id: 3,
         image: mneeCommit,
         title: "Commit Protocol (MNEE)",
         github: "github.com/ayush18pop/mnee-commit",
@@ -25,17 +35,6 @@ const myShowCases = [
         type: "Escrow Protocol",
         tech: "Solidity, AI, Next.js",
         description: "Optimistic, time-locked escrow protocol for DAO work settlement using AI agents as witnesses."
-    },
-    {
-        id: 3,
-        image: aiMagic,
-        title: "aiMagic.2d",
-        github: "github.com/Vishesh-Dwivedi-Git/aiMagic.2d",
-        Live: "aimagic2d.vercel.app",
-        demo: "www.loom.com/share/b5e7e05e132642afb39f546381671d2c?sid=a8d050a2-aa09-4e74-baf4-cc67c595af50",
-        type: "AI Animation",
-        tech: "Python, Flask, Manim",
-        description: "AI-powered 2D animation generator processing 200+ prompts daily with 90% user satisfaction."
     }
 ];
 

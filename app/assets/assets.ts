@@ -67,6 +67,8 @@ import CarbonTrade from "@assets/CarbonTrade.png";
 import solonautics from "@assets/solonautics.png";
 import trophyIcon from "@assets/trophy.png"
 import calenderAi from "@assets/calenderAi.png"
+import OneStudios from "@assets/onestudios.png"
+import StockShield from "@assets/stockshield.png"
 export {
   mneeCommit,
   rwaOdyssee,
@@ -128,4 +130,6 @@ export {
   DocumentIntelligence,
   Wanderify,
   CapsuleX,
+  OneStudios,
+  StockShield,
 };

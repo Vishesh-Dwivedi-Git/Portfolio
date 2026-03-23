@@ -20,8 +20,8 @@ export default function Hero() {
     const handleDownloadResume = (type: 'blockchain' | 'swe') => {
         // Replace with your actual resume PDF URLs
         const resumeUrls = {
-            blockchain: 'https://drive.google.com/file/d/1WO_X_6zUF6cUeIuzS0LUH9B943iIgtx6/view?usp=sharing',
-            swe: 'https://drive.google.com/file/d/12qmH5f5d2ejeQ8sg2Zmp5metmaYJ0C-h/view?usp=sharing'
+            blockchain: 'https://drive.google.com/file/d/1rtBXRkeDtFJSg64J7kFOF7ImyJQ402QV/view?usp=sharing',
+            swe: 'https://drive.google.com/file/d/11BR4TnrES1FffTLI6zO1uVpz2AtoAqYv/view?usp=sharing'
         };
         window.open(resumeUrls[type], '_blank');
     };
